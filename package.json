@@ -1,0 +1,22 @@
+{
+  "name": "uni-it-hub",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json}\"",
+    "test": "vitest run",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @uni-it/database db:generate",
+    "db:migrate": "pnpm --filter @uni-it/database db:migrate"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  },
+  "packageManager": "pnpm@10.5.0"
+}

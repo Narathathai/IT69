@@ -23,12 +23,21 @@ importers:
 
   apps/web:
     dependencies:
+      '@uni-it/ai-support':
+        specifier: workspace:*
+        version: link:../../modules/ai-support
       '@uni-it/api-contracts':
         specifier: workspace:*
         version: link:../../packages/api-contracts
       '@uni-it/iam':
         specifier: workspace:*
         version: link:../../modules/iam
+      '@uni-it/infra-catalog':
+        specifier: workspace:*
+        version: link:../../modules/infra-catalog
+      '@uni-it/itsm':
+        specifier: workspace:*
+        version: link:../../modules/itsm
       '@uni-it/status-page':
         specifier: workspace:*
         version: link:../../modules/status-page
@@ -67,6 +76,31 @@ importers:
         specifier: ^5.7.3
         version: 5.9.3
 
+  modules/ai-support:
+    dependencies:
+      '@uni-it/api-contracts':
+        specifier: workspace:*
+        version: link:../../packages/api-contracts
+      '@uni-it/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@uni-it/itsm':
+        specifier: workspace:*
+        version: link:../itsm
+      '@uni-it/status-page':
+        specifier: workspace:*
+        version: link:../status-page
+      zod:
+        specifier: ^3.24.2
+        version: 3.25.76
+    devDependencies:
+      typescript:
+        specifier: ^5.7.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.0.7
+        version: 3.2.7(@types/node@26.4.1)(jiti@1.21.7)
+
   modules/iam:
     dependencies:
       '@uni-it/api-contracts':
@@ -78,6 +112,25 @@ importers:
       drizzle-orm:
         specifier: ^0.38.4
         version: 0.38.4(@types/pg@8.23.1)(@types/react@18.3.31)(pg@8.23.0)(postgres@3.4.9)(react@18.3.1)
+      zod:
+        specifier: ^3.24.2
+        version: 3.25.76
+    devDependencies:
+      typescript:
+        specifier: ^5.7.3
+        version: 5.9.3
+      vitest:
+        specifier: ^3.0.7
+        version: 3.2.7(@types/node@26.4.1)(jiti@1.21.7)
+
+  modules/infra-catalog:
+    dependencies:
+      '@uni-it/api-contracts':
+        specifier: workspace:*
+        version: link:../../packages/api-contracts
+      '@uni-it/database':
+        specifier: workspace:*
+        version: link:../../packages/database
       zod:
         specifier: ^3.24.2
         version: 3.25.76

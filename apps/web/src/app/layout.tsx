@@ -28,11 +28,21 @@ export default function RootLayout({
                 <p className="text-xs text-slate-500">ส่วนเทคโนโลยีสารสนเทศ มหาวิทยาลัย</p>
               </div>
             </div>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              <a href="/sspr" className="text-slate-600 hover:text-blue-600 transition">
-                รีเซ็ตรหัสผ่าน (SSPR)
+            <nav className="flex items-center space-x-5 text-xs sm:text-sm font-medium">
+              <a href="/chat" className="text-slate-600 hover:text-purple-600 transition flex items-center space-x-1">
+                <span>🤖</span>
+                <span>AI ผู้ช่วย</span>
               </a>
-              <a href="/status" className="text-slate-600 hover:text-blue-600 transition flex items-center space-x-1.5">
+              <a href="/sspr" className="text-slate-600 hover:text-blue-600 transition">
+                รีเซ็ตรหัสผ่าน
+              </a>
+              <a href="/catalog" className="text-slate-600 hover:text-blue-600 transition">
+                แคตตาล็อกบริการ
+              </a>
+              <a href="/tickets" className="text-slate-600 hover:text-blue-600 transition">
+                แจ้งปัญหา
+              </a>
+              <a href="/status" className="text-slate-600 hover:text-emerald-600 transition flex items-center space-x-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
                 <span>สถานะระบบ</span>
               </a>

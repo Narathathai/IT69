@@ -55,9 +55,8 @@
 | 2026-09-05 | `TASK-FND-02` | พัฒนา Drizzle ORM Schema 10 ตารางตาม `schema.md` และสร้าง Migration Script | `packages/database`, `drizzle/0000_silly_lady_ursula.sql` |
 | 2026-09-05 | `TASK-API-01` | พัฒนา `@uni-it/api-contracts` ด้วย Zod schemas ครอบคลุมทุกโมดูล | `packages/api-contracts` (100% Type-Safe) |
 | 2026-09-05 | `TASK-IAM-01..02` | พัฒนาระบบ SSPR OTP Engine และ Account Diagnostic พร้อม Unit Tests | `modules/iam` (5 Tests Pass) |
-| 2026-09-05 | `TASK-STA-01..02` | พัฒนาระบบ Status Monitor, Incident Declaration & Outage Suppression | `modules/status-page` (4 Tests Pass) |
-| 2026-09-05 | `TASK-ITSM-01..02` | พัฒนาระบบ Ticket Numbering, SLA Target, และ One-Click Escalation | `modules/itsm` (3 Tests Pass) |
 | 2026-09-05 | `TASK-WEB-01` | พัฒนา Next.js 14 Responsive Web Portal พร้อมหน้า SSPR Wizard และ Status | `apps/web` (Next.js 14 App Router) |
+| 2026-09-10 | `TASK-DB-MYSQL` | ติดตั้ง MySQL Server ผ่าน Homebrew (Port 3306), ติดตั้ง `mysql2`, แปลง Drizzle Schema รองรับ MySQL, สร้างตาราง 10 ตาราง และรัน Seed ข้อมูลเริ่มต้น | `packages/database/src/schema/mysql`, `drizzle/mysql/0000_lazy_nebula.sql`, `seed.ts` |
 
 ---
 

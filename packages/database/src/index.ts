@@ -1,2 +1,2 @@
-export * from './schema';
+export * from './schema/mysql';
 export * from './client';

@@ -1,12 +1,11 @@
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-import * as schema from './schema';
+import { drizzle } from 'drizzle-orm/mysql2';
+import mysql from 'mysql2/promise';
+import * as schema from './schema/mysql';
 
 const connectionString =
-  process.env.DATABASE_URL ||
-  'postgresql://uni_admin:uni_secret_pass@localhost:5432/uni_it_hub';
+  process.env.DATABASE_URL || 'mysql://root@localhost:3306/uni_it_hub';
 
-// For migrations & queries
-export const queryClient = postgres(connectionString, { max: 10 });
-export const db = drizzle(queryClient, { schema });
+// MySQL connection pool
+export const poolConnection = mysql.createPool(connectionString);
+export const db = drizzle(poolConnection, { schema, mode: 'default' });
 export type DatabaseInstance = typeof db;
